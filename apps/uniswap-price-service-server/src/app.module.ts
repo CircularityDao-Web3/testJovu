@@ -14,6 +14,8 @@ import { OTLPTraceExporter } from "@opentelemetry/exporter-trace-otlp-grpc";
 import { BatchSpanProcessor } from "@opentelemetry/sdk-trace-node";
 import { EthersModule } from "./Ethers/ethers.module";
 import { PriceFetcherModule } from "./PriceFetcher/pricefetcher.module";
+import { UniswapPriceComponentModule } from "./UniswapPriceComponent/uniswappricecomponent.module";
+import { UniswapPriceUiModule } from "./UniswapPriceUi/uniswappriceui.module";
 import { HealthModule } from "./health/health.module";
 import { PrismaModule } from "./prisma/prisma.module";
 import { SecretsManagerModule } from "./providers/secrets/secretsManager.module";
@@ -28,6 +30,8 @@ import { ApolloDriver, ApolloDriverConfig } from "@nestjs/apollo";
   imports: [
     EthersModule,
     PriceFetcherModule,
+    UniswapPriceComponentModule,
+    UniswapPriceUiModule,
     HealthModule,
     PrismaModule,
     SecretsManagerModule,
